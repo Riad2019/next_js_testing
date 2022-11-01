@@ -1,13 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import Layout from '../components/Layout'
+import { UserProvider } from '@auth0/nextjs-auth0';
+import '../styles/globals.css'
 
 
 function MyApp({ Component, pageProps }) {
   return (
-     <Layout>
+    <UserProvider>
+
+       <Layout>
       <Component {...pageProps} />
      
      </Layout>
+    </UserProvider>
+    
  )
 }
 

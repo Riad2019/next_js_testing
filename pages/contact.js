@@ -1,10 +1,15 @@
+import { withPageAuthRequired} from "@auth0/nextjs-auth0";
+
 const Contact = () => {
     return (  
         <>
-        <p>hello Contact page working</p>
+        <p>mrahman@binaryquest.com</p>
         
         </>
     );
 }
  
 export default Contact;
+
+
+export const getServerSideProps = withPageAuthRequired();

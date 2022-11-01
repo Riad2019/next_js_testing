@@ -2,7 +2,7 @@
  const Header = () => {
     return ( 
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
          <div class="container-fluid">
             <a className='navbar-brand' href='/' >
                 Binary Quest
@@ -11,6 +11,9 @@
              <ul class="nav">
                <li class="nav-item active">
                      <a class="nav-link"href="/" >Home </a>
+            </li>
+            <li class="nav-item active">
+                     <a class="nav-link"href="/newslist" >Todays News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
