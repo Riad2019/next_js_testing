@@ -1,5 +1,5 @@
 import React from "react";
-import { withPageAuthRequired} from "@auth0/nextjs-auth0";
+import { withPageAuthRequired, getAccessToken} from "@auth0/nextjs-auth0";
 const index = () => {
     return ( 
       

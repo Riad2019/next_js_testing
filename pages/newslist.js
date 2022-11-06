@@ -1,5 +1,5 @@
 import NewsList from "../components/NewsList";
-import { withPageAuthRequired} from "@auth0/nextjs-auth0";
+import { withPageAuthRequired,getSession} from "@auth0/nextjs-auth0";
 
 
 const NewsAll = ({newsList}) => {
@@ -18,12 +18,14 @@ const NewsAll = ({newsList}) => {
 
 
 export const getServerSideProps = withPageAuthRequired({
-    async getServerSideProps(){
-
+    async getServerSideProps(context){
+        
+     const Session =getSession(context.req,context.res)
+     console.log(Session)
      
         const res = await fetch('https://jsonplaceholder.typicode.com/posts')
         const newsList = await res.json();
-        console.log(newsList)
+        // console.log(newsList)
         return {
             props: {
               newsList

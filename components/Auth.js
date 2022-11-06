@@ -8,10 +8,12 @@ const Auth = () => {
    
    if (isLoading) return <div>Loading...</div>;
    if (error) return <div>{error.message}</div>;
- 
+   
    if (user) {
+    
      return (
        <div>
+       
         <h6>Welcome {user.name}!</h6>
         
          <Link className="btn btn-success" href="/api/auth/logout" >
@@ -26,7 +28,7 @@ const Auth = () => {
  
    return <>
    <h4>Please Log In For Reading News!!</h4>
-   <Link className="btn btn-success" href="/newslist" >
+   <Link className="btn btn-success" href="/api/auth/login" >
    Login
   </Link>
    </>
